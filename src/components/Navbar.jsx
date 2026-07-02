@@ -50,6 +50,18 @@ const Navbar = () => {
     setIsOpen(false)
   }
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isOpen])
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-primary/80 backdrop-blur-xl border-b border-theme transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,8 +107,9 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu with better scrolling */}
       {isOpen && (
-        <div className="md:hidden bg-primary/95 backdrop-blur-xl border-t border-theme p-4 flex flex-col gap-4 transition-all">
+        <div className="md:hidden bg-primary/95 backdrop-blur-xl border-t border-theme p-4 flex flex-col gap-4 transition-all max-h-[80vh] overflow-y-auto touch-scroll">
           {links.map((link) => (
             <a
               key={link.name}

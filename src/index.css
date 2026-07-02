@@ -9,12 +9,18 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
   }
 
   body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    overflow-y: scroll; /* Ensure scrolling works */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
   }
 
   /* Theme variables */
@@ -109,5 +115,25 @@
 
   .smooth-3d {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Mobile scroll utilities */
+  .touch-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 640px) {
+  .section-padding {
+    padding: 60px 0;
   }
 }

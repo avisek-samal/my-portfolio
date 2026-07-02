@@ -22,7 +22,7 @@ const Hero = () => {
           >
             <div className="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-1">
               <img
-                src="/src/images/Avisek.png"
+                src="/images/Avisek.png"
                 alt="Avatar"
                 className="w-full h-full rounded-full object-cover border-4 border-white dark:border-black"
               />

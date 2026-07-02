@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'Home-Mate',
     desc: 'A web application that connects to different home services to users doorstep',
-    img: '/src/images/homeMate.png',
+    img: '/images/homeMate.png',
     tags: ['React', 'Tailwind CSS', 'Node.js','Express','MongoDB'],
     github: '#',
     live: '#',
@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'FuelUp',
     desc: 'A web application that helps users to order fuel online and get it delivered to their doorstep',
-    img: '/src/images/fuelup.png',
+    img: '/images/fuelup.png',
     tags: ['React', 'Tailwind CSS', 'Java','Spring Boot','MySQL'],
     github: '#',
     live: '#',
@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'CBS Wallet',
     desc: 'A digital wallet application for seamless transactions',
-    img: '/src/images/cbs.png',
+    img: '/images/cbs.png',
     tags: ['React', 'Tailwind CSS', 'java','Spring Boot','PostgreSQL'],
     github: '#',
     live: '#',
