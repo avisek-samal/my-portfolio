@@ -50,15 +50,21 @@ const Navbar = () => {
     setIsOpen(false)
   }
 
-  // Prevent body scroll when mobile menu is open
+  // Fix: Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.width = '100%'
     } else {
-      document.body.style.overflow = 'unset'
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
     }
     return () => {
-      document.body.style.overflow = 'unset'
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
     }
   }, [isOpen])
 
@@ -107,7 +113,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu with better scrolling */}
       {isOpen && (
         <div className="md:hidden bg-primary/95 backdrop-blur-xl border-t border-theme p-4 flex flex-col gap-4 transition-all max-h-[80vh] overflow-y-auto touch-scroll">
           {links.map((link) => (
