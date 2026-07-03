@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import { FiGithub, FiLinkedin, FiTwitter, FiArrowDown } from 'react-icons/fi'
-import FloatingShapes from '../3d/FloatingShapes'
+import FloatingShapesWrapper from '../3d/FloatingShapesWrapper'
 import InteractiveCard from '../3d/InteractiveCard'
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-primary section-padding"
     >
-      <FloatingShapes />
+      <FloatingShapesWrapper />
       
       <div className="max-w-6xl mx-auto text-center px-4 sm:px-6 relative z-10">
         <InteractiveCard className="inline-block">

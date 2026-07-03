@@ -24,6 +24,7 @@
     min-height: 100vh;
     min-height: 100dvh;
     height: auto !important;
+    touch-action: pan-y pinch-zoom;
   }
 
   /* Theme variables */
@@ -58,12 +59,6 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, #7c3aed, #db2777);
-  }
-
-  /* Fix for canvas blocking scroll */
-  canvas {
-    touch-action: none;
-    pointer-events: none !important;
   }
 }
 
@@ -136,6 +131,11 @@
   
   .safe-bottom {
     padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Ensure sections don't block scroll */
+  section {
+    touch-action: pan-y;
   }
 }
 
